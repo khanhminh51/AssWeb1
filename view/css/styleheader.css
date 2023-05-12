@@ -1,0 +1,104 @@
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+.marquee {
+    height: 25px;
+    width: 100%;
+    background-image: url(https://mcdn.coolmate.me/image/December2022/pattern-100_1.jpg) ;
+    overflow: hidden;
+    position: relative;
+  }
+
+.marquee div {
+display: block;
+width: 200%;
+height: 30px;
+
+position: absolute;
+overflow: hidden;
+
+animation: marquee 30s linear infinite;
+}
+
+.marquee span {
+float: left;
+width: 20%;
+color: white;
+
+}
+
+@keyframes marquee {
+0% { left: 0; }
+100% { left: -100%; }
+}
+.header{
+    background: #2F5ACF;
+    display: flex;
+    padding: 0px 50px;
+    justify-content: center;
+
+}
+.header a{
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    padding: 0px 20px;
+}
+.header a:hover{
+    color: #F7C96F;
+}
+.col-third {
+
+    line-height: 50px;
+    width: 33.333333% !important;
+}
+.pdr{
+    padding-left: 130px;
+}
+.headerAppear{
+    display: flex;
+    display: none;
+}
+/* tablet */
+@media (min-width: 740px) and (max-width:1300px){
+    .headerHide{
+    display: none;
+    }
+    .headerAppear{
+        display: block;
+    }
+    .col-third{
+        width: auto !important;
+    }
+    .pdr {
+        padding-left: 380px;
+    }
+}
+/* mobiphone */
+@media(max-width:739px){
+    .khampha img{
+        max-width: 390px;
+        max-height: 207px;
+    }
+    .nav_chinh {
+        transform: translate(5%,-95%) !important;
+    }
+    .headerHide{
+        display: none;
+    }
+    .marquee{
+        display: none;
+    }
+    .headerAppear{
+        display: block;
+    }
+    .col-third{
+    }
+    .mgt28{
+        margin-top: 28px;
+    }
+    .pdr {
+        padding-left: 100px;
+    }
+}
